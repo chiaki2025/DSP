@@ -37,6 +37,7 @@ grid on
 xlabel('x')
 ylabel('y')
 title('Figure 2')
+pause
 
 
 
