@@ -1,9 +1,7 @@
 %% Problem 1: (Functions defined at the end of this file)
 clc, clearvars, close all
-
 subplot(2,2,1)
 Unit(0, -5, 5)
-
 subplot(2,2,2)
 Unit(-2, -5, 5)
 
@@ -18,7 +16,7 @@ t = -10 : 0.1 : 10;
 % sinc(t) function
 subplot(2, 2, 1)
 x = sin(t)./t;
-x(t == 0) = 1; 
+x(t == 0) = 1;
 plot(t, x, "LineWidth", 2)
 grid on
 subplot(2, 2, 2)
@@ -28,8 +26,8 @@ plot(t, x, "LineWidth", 2)
 grid on
 % periodic square wave
 subplot(2, 2, 3)
-T = 2;                         
-A = 1;                         
+T = 2;
+A = 1;
 x = A * square((2 * pi / T) * t);
 x = (x + 1) / 2;
 plot(t, x, "LineWidth", 2)
@@ -55,7 +53,7 @@ phase_X = angle(X)*180/pi;
 w=[0:2*pi/N:2*pi];
 subplot(2,2,1);
 plot(w(1:end-1), mag_X, "LineWidth",2);
-grid; 
+grid;
 title("Magnitude of X(w)");
 subplot(2,2,2);
 plot(w(1:end-1), phase_X,"LineWidth",2);
@@ -73,7 +71,7 @@ phase_X = angle(X)*180/pi;
 w=[0:2*pi/N:2*pi];
 subplot(2,2,3);
 plot(w(1:end-1), mag_X, "LineWidth",2);
-grid; 
+grid;
 title("Magnitude of X(w)");
 subplot(2,2,4);
 plot(w(1:end-1), phase_X,"LineWidth",2);
@@ -84,7 +82,7 @@ grid;
 % Unit signal
 function [x n] = Unit(n0, n1, n2)
 n = n1 : n2;
-x = double(n >= n0); 
+x = double(n >= n0);
 stem(n ,x, "LineWidth", 2);
 end
 % Rectangular signal

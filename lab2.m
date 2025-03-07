@@ -1,4 +1,4 @@
-%% Pactical problem
+%% Practical problem
 clc, clear, close all
 n = -200 : 1 : 200;
 x_n = 5 * [cos(0.49 * pi * n) + cos(0.51 * pi * n)];
@@ -66,6 +66,21 @@ m = n + 3 % Time shifting 3 unit step
 stem(m, x, 'LineWidth', 2)
 title('Shifted signal')
 pause
-%%Time expandsion
+%%Signal in frequency domain
+n = 0 : 100;
+x = sin(2*pi.*n/3);
+L = length(x);
+N = 512;
+X = fft(x, N);
+mag_X = abs(X)/L;
+phase_X = angle(X)*180/pi;
+subplot(3, 1, 1)
+plot(n, x, "r", "LineWidth", 2)
+title('Signal in time domain')
+w = [0:2*pi/N:2*pi];
+subplot(3,1,2)
+title('Signal in frequency domain')
+plot(w(1:end-1),mag_X,"LineWidth",2)
+
 
 

@@ -1,8 +1,4 @@
-function [] = deltaSig(t0, t1)
-%UNTITLED18 Summary of this function goes here
-%   Detailed explanation goes here
-t = linspace(t0, t1, 100);
-x = sin(t);
-plot(t, x, "LineWidth", 2)
-grid on
-end
+function delta_n = deltaSig(n0)
+    n = -10 : 1 : 10;
+   delta_n = (n == n0);
+   endfunction
