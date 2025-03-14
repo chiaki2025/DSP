@@ -1,5 +1,4 @@
 clc, clearvars, close all
-graphics_toolkit("qt")
 f = 1000, T = 1/f;
 t = 0 : T/100 : 2*T;
 subplot(3, 2, 1)
